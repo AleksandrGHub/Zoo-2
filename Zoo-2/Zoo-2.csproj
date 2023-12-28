@@ -45,19 +45,14 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="Aviary.cs" />
-    <Compile Include="Bear.cs" />
     <Compile Include="BearFactory.cs" />
-    <Compile Include="Elephant.cs" />
     <Compile Include="ElephantFactory.cs" />
     <Compile Include="Factory.cs" />
-    <Compile Include="Horse.cs" />
     <Compile Include="HorseFactory.cs" />
-    <Compile Include="Lion.cs" />
     <Compile Include="LionFactory.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tiger.cs" />
     <Compile Include="TigerFactory.cs" />
     <Compile Include="Zoo.cs" />
   </ItemGroup>

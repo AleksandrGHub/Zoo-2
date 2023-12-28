@@ -14,7 +14,7 @@ namespace Zoo_2
 
         public void ShowInfo()
         {
-            Console.WriteLine($"В вольере находится {_animals[0].Type}, {_animals.Count} особей");
+            Console.WriteLine($"В вольере находятся {_animals[0].Type}, {_animals.Count} особей");
 
             foreach (var animal in _animals)
             {

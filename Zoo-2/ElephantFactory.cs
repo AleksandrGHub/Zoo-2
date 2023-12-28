@@ -4,7 +4,7 @@
     {
         public override Animal Create()
         {
-            return new Elephant("Слоны", "Фр-р-фр!");
+            return new Animal(type: "Слоны", sound: "Фр-р-фр!");
         }
     }
 }

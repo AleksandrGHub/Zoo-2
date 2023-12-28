@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Security.Cryptography;
 
 namespace Zoo_2
 {
     class Animal
     {
-        private RNGCryptoServiceProvider _random = new RNGCryptoServiceProvider();
-
-        private List<string> _genders = new List<string>()
-        {
-            "Male",
-            "Female"
-        };
+        private RNGCryptoServiceProvider _cryptoServiceProvider = new RNGCryptoServiceProvider();
 
         public Animal(string type, string sound)
         {
@@ -29,29 +22,20 @@ namespace Zoo_2
         {
             int divisor = 2;
             int remainder = 0;
-            int firstIndex = 0;
-            int secondIndex = 1;
 
-            string gender;
+            string firstGender = "Male";
+            string secondGender = "Female";
 
-            if (GetRandomNumber() % divisor == remainder)
-            {
-                gender = _genders[firstIndex];
-            }
-            else
-            {
-                gender = _genders[secondIndex];
-            }
-
-            return gender;
+            return GetRandomNumber() % divisor == remainder ? firstGender : secondGender;
         }
 
         private int GetRandomNumber()
         {
-            byte[] randomNumber = new byte[4];
-            _random.GetBytes(randomNumber);
-            int number = BitConverter.ToInt32(randomNumber, 0);
-            return number;
+            byte[] randomNumbers = new byte[4];
+
+            _cryptoServiceProvider.GetBytes(randomNumbers);
+
+            return BitConverter.ToInt32(randomNumbers, 0);
         }
     }
 }

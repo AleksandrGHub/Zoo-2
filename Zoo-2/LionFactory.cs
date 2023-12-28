@@ -4,7 +4,7 @@
     {
         public override Animal Create()
         {
-            return new Lion("Львы", "Р-р-р-р-р!");
+            return new Animal(type: "Львы", sound: "Р-р-р-р-р!");
         }
     }
 }

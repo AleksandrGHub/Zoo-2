@@ -17,8 +17,6 @@ namespace Zoo_2
         {
             string userInput;
 
-            _zoo.AddAnimals();
-
             do
             {
                 Console.Clear();
@@ -29,23 +27,23 @@ namespace Zoo_2
                 switch (userInput)
                 {
                     case LookLionCommand:
-                        _zoo.ShowAviary(0);
+                        _zoo.ShowAviary(index: 0);
                         break;
 
                     case LookBearCommand:
-                        _zoo.ShowAviary(1);
+                        _zoo.ShowAviary(index: 1);
                         break;
 
                     case LookHorseCommand:
-                        _zoo.ShowAviary(2);
+                        _zoo.ShowAviary(index: 2);
                         break;
 
                     case LookTigerCommand:
-                        _zoo.ShowAviary(3);
+                        _zoo.ShowAviary(index: 3);
                         break;
 
                     case LookElephantCommand:
-                        _zoo.ShowAviary(4);
+                        _zoo.ShowAviary(index: 4);
                         break;
                 }
             } while (userInput != ExitCommand);
